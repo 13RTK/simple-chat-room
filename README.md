@@ -3,9 +3,8 @@
 -   The project are based on Vue, TailwindCSS and Node.js
 -   The Database of the current project is MySQL, please initialize the database before start(DDL in backend/schema.sql)
 
-- Architecture
-![](https://github.com/13RTK/simple-chat-room/blob/main/backend/server.png)
-
+-   Architecture
+    ![server.png](https://s2.loli.net/2023/09/29/d1My93hSjrOfYzg.png)
 
 # 2. Start
 

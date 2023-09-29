@@ -2,6 +2,8 @@
 
 -   该项目基于 Vue、TailwindCSS 和 Node.js。
 -   当前项目的数据库是 MySQL，请在开始之前初始化数据库（DDL 在 backend/schema.sql 文件中）。
+-   架构图:
+    ![server.png](https://s2.loli.net/2023/09/29/d1My93hSjrOfYzg.png)
 
 # 2. 启动
 
