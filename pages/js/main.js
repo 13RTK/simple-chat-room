@@ -12,6 +12,8 @@ class Message {
     }
 }
 
+const API_URL = "http://127.0.0.1:3000/api/v1/message";
+
 const app = {
     data() {
         return {
@@ -48,18 +50,15 @@ const app = {
                 return;
             }
 
-            const response = await fetch(
-                "http://127.0.0.1:3000/api/v1/message",
-                {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify({
-                        content: this.currentMessage,
-                    }),
-                }
-            );
+            const response = await fetch(`${API_URL}`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    content: this.currentMessage,
+                }),
+            });
             const data = await response.json();
 
             if (data.status !== "success" || !response.ok) {
@@ -77,12 +76,9 @@ const app = {
                 return;
             }
 
-            const response = await fetch(
-                "http://127.0.0.1:3000/api/v1/message",
-                {
-                    method: "PATCH",
-                }
-            );
+            const response = await fetch(`${API_URL}`, {
+                method: "PATCH",
+            });
             const data = await response.json();
 
             if (!response.ok || data.status !== "success") {
@@ -94,12 +90,9 @@ const app = {
         },
 
         async getMessages() {
-            const response = await fetch(
-                "http://127.0.0.1:3000/api/v1/message",
-                {
-                    method: "GET",
-                }
-            );
+            const response = await fetch(`${API_URL}`, {
+                method: "GET",
+            });
             const data = await response.json();
             if (!response.ok || data.status !== "success") {
                 alert("获取失败");
