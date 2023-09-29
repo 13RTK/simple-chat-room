@@ -16,6 +16,19 @@ pnpm install
 yarn install
 ```
 
+-   Deploy the backend RESTAPI via pm2
+
+```shell
+npm i pm2 -g
+pm2 start ./backend/server.js
+```
+
+-   Monitor the backend log
+
+```shell
+pm2 monit
+```
+
 -   Deploy the frontend page via docker(please install docker before this step)
 
 ```shell

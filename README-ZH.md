@@ -15,6 +15,19 @@ pnpm install
 yarn install
 ```
 
+-   通过 pm2 部署后端接口
+
+```shell
+npm i pm2 -g
+pm2 start ./backend/server.js
+```
+
+-   监看接口日志
+
+```shell
+pm2 monit
+```
+
 -   通过 Docker 部署前端页面（请在此步骤之前安装 Docker）
 
 ```shell
