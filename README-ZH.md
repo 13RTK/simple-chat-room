@@ -5,9 +5,6 @@
 -   架构图:
     ![server.png](https://s2.loli.net/2023/09/29/d1My93hSjrOfYzg.png)
 
--   架构图
-![](https://gitee.com/alex_john/chat-room-demo/blob/main/backend/server.png)
-
 # 2. 启动
 
 -   进入 backend 目录并安装依赖项
