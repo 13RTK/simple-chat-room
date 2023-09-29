@@ -3,6 +3,9 @@
 -   该项目基于 Vue、TailwindCSS 和 Node.js。
 -   当前项目的数据库是 MySQL，请在开始之前初始化数据库（DDL 在 backend/schema.sql 文件中）。
 
+-   架构图
+![](https://gitee.com/alex_john/chat-room-demo/blob/main/backend/server.png)
+
 # 2. 启动
 
 -   进入 backend 目录并安装依赖项
