@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script src="https://unpkg.com/vue@3.3.4/dist/vue.global.js"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body>
+        <div id="app" class="text-center">
+            <h1 class="text-8xl">聊天室</h1>
+
+            <!-- Message container -->
+            <main class="rounded border-black-500 border-2">
+                <div
+                    v-for="messageObj in messages"
+                    class="rounded bg-green-300 w-1/4 mx-auto my-4"
+                    v-show="messages.length > 0"
+                >
+                    <div>
+                        {{ messageObj.datetime }} : {{ messageObj.message }}
+                    </div>
+                </div>
+            </main>
+
+            <input
+                type="text"
+                v-model.trim.lazy="currentMessage"
+                class="border-2 border-black-500 rounded mt-4"
+                placeholder="输入消息"
+            />
+            <br />
+            <button
+                class="border-2 border-blue-500 rounded hover:bg-blue-500 mt-4 mx-2"
+                @click.prevent="submitMessage"
+            >
+                发送
+            </button>
+            <button
+                class="border-2 border-blue-500 rounded hover:bg-blue-500 mt-4 mx-2"
+                @click.prevent="reset"
+            >
+                重置
+            </button>
+        </div>
+        <!-- <script src="/socket.io/socket.io.js"></script> -->
+        <script src="js/main.js"></script>
+    </body>
+</html>
